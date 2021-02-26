@@ -485,7 +485,7 @@ export default class WorldMap {
         return this.getCategoryColor(dataPoint.locationName);
       case ColorModes.threshold.id:
       default:
-        return this.getThresholdColor(dataPoint.value);
+        return this.getThresholdColor(dataPoint.category);
     }
   }
 

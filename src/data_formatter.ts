@@ -352,6 +352,7 @@ export default class DataFormatter {
 
         // Assign value.
         const value = datapoint[this.settings.tableQueryOptions.metricField];
+        const category = datapoint[this.settings.tableQueryOptions.categoryField];
         const valueRounded = kbn.roundValue(value, this.settings.decimals || 0);
 
         // Assign latitude and longitude, either directly or by decoding from geohash.
@@ -400,6 +401,7 @@ export default class DataFormatter {
           // Add metric name and values.
           label: label,
           value: value,
+          category: category,
           valueFormatted: value,
           valueRounded: valueRounded,
 

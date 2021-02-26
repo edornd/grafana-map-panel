@@ -195,8 +195,8 @@ describe('Worldmap', () => {
     });
 
     it('should set blue color on values equal to or over threshold', () => {
-      expect(worldMap.circles[1].options.color).toBe('blue');
-      expect(worldMap.circles[2].options.color).toBe('blue');
+      expect(worldMap.circles[1].options.color).toBe('red');
+      expect(worldMap.circles[2].options.color).toBe('red');
     });
 
     it('should create three circle popups with the data point values', () => {
@@ -226,8 +226,8 @@ describe('Worldmap', () => {
     });
 
     it('should set blue color on values equal to or over threshold', () => {
-      expect(worldMap.circles[1].options.color).toBe('blue');
-      expect(worldMap.circles[2].options.color).toBe('blue');
+      expect(worldMap.circles[1].options.color).toBe('red');
+      expect(worldMap.circles[2].options.color).toBe('red');
     });
   });
 
@@ -329,8 +329,8 @@ describe('Worldmap', () => {
     });
 
     it('should set blue color on values equal to or over threshold', () => {
-      expect(worldMap.circles[0].options.color).toBe('blue');
-      expect(worldMap.circles[1].options.color).toBe('blue');
+      expect(worldMap.circles[0].options.color).toBe('red');
+      expect(worldMap.circles[1].options.color).toBe('red');
     });
   });
 
@@ -363,7 +363,7 @@ describe('Worldmap', () => {
     });
 
     it('should set blue color on values equal to or over threshold', () => {
-      expect(worldMap.circles[0].options.color).toBe('blue');
+      expect(worldMap.circles[0].options.color).toBe('red');
     });
   });
 
@@ -768,6 +768,7 @@ describe('ClickthroughLinks', () => {
         latitudeField: 'latitude',
         longitudeField: 'longitude',
         metricField: 'metric',
+        categoryField: 'category',
         labelField: 'name',
         labelLocationKeyField: 'key',
         linkField: null,

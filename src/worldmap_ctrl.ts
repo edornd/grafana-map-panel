@@ -75,6 +75,7 @@ const panelDefaults = {
     latitudeField: 'latitude',
     longitudeField: 'longitude',
     metricField: 'metric',
+    categoryField: 'category',
     labelField: null,
     labelLocationKeyField: null,
     linkField: null,

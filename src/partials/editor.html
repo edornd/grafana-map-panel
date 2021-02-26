@@ -132,6 +132,12 @@
                        placeholder="metric" ng-model-onblur/>
             </div>
             <div class="gf-form" ng-show="ctrl.showTableOptions()">
+                <label class="gf-form-label width-12">Category field</label>
+                <input type="text" class="input-small gf-form-input width-10"
+                       ng-model="ctrl.panel.tableQueryOptions.categoryField" ng-change="ctrl.refresh()"
+                       placeholder="category" ng-model-onblur/>
+            </div>
+            <div class="gf-form" ng-show="ctrl.showTableOptions()">
                 <label class="gf-form-label width-12">Label field</label>
                 <input type="text" class="input-small gf-form-input width-10"
                        ng-model="ctrl.panel.tableQueryOptions.labelField" ng-change="ctrl.refresh()"
@@ -164,6 +170,12 @@
                        ng-change="ctrl.refresh()"
                        placeholder="metric" ng-model-onblur
                 />
+            </div>
+            <div class="gf-form" ng-show="ctrl.panel.locationData === 'geohash'">
+                <label class="gf-form-label width-12">Category field</label>
+                <input type="text" class="input-small gf-form-input width-10" ng-model="ctrl.panel.esMetric"
+                       ng-change="ctrl.refresh()"
+                       placeholder="metric" ng-model-onblur/>
             </div>
             <div class="gf-form" ng-show="ctrl.panel.locationData === 'geohash'">
                 <label class="gf-form-label width-12">Label field</label>
@@ -262,6 +274,7 @@
                     circle should be drawn.
                 </li>
                 <ng-template ng-include="'help_metric_field'"></ng-template>
+                <ng-template ng-include="'help_category_field'"></ng-template>
                 <ng-template ng-include="'help_location_fields'"></ng-template>
             </ul>
         </div>
@@ -277,6 +290,7 @@
                     circle should be drawn.
                 </li>
                 <ng-template ng-include="'help_metric_field'"></ng-template>
+                <ng-template ng-include="'help_category_field'"></ng-template>
                 <ng-template ng-include="'help_location_fields'"></ng-template>
             </ul>
         </div>
@@ -294,6 +308,7 @@
                     where the circle should be drawn.
                 </li>
                 <ng-template ng-include="'help_metric_field'"></ng-template>
+                <ng-template ng-include="'help_category_field'"></ng-template>
                 <ng-template ng-include="'help_location_fields'"></ng-template>
             </ul>
         </div>
@@ -306,6 +321,12 @@
         the circle is
         displayed (when not limited by the minimum/maximum circle size options below) and will also be used to colorize
         the circle by mapping the value against configured thresholds.
+    </li>
+</script>
+<script type="text/ng-template" id="help_category_field">
+    <li>
+        <b>Category field (optional)</b>: Enter the name of the category column. The value is used to determine the
+        color of the circle displayed.
     </li>
 </script>
 <script type="text/ng-template" id="help_location_fields">
